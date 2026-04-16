@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_000001d7ca228a20 .scope module, "OR_Gate_example_tb" "OR_Gate_example_tb" 2 4;
+ .timescale -9 -9;
+v000001d7ca22b690_0 .var "A", 0 0;
+v000001d7ca22b730_0 .var "B", 0 0;
+v000001d7ca22b7d0_0 .net "R", 0 0, L_000001d7ca095c40;  1 drivers
+S_000001d7ca22b1b0 .scope module, "uut" "OR_Gate" 2 9, 3 1 0, S_000001d7ca228a20;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "R";
+L_000001d7ca095c40 .functor OR 1, v000001d7ca22b690_0, v000001d7ca22b730_0, C4<0>, C4<0>;
+v000001d7ca0637c0_0 .net "A", 0 0, v000001d7ca22b690_0;  1 drivers
+v000001d7ca063120_0 .net "B", 0 0, v000001d7ca22b730_0;  1 drivers
+v000001d7ca22b340_0 .net "R", 0 0, L_000001d7ca095c40;  alias, 1 drivers
+    .scope S_000001d7ca228a20;
+T_0 ;
+    %vpi_call 2 12 "$display", "Time\011A B | R" {0 0 0};
+    %vpi_call 2 13 "$monitor", "%g\011%b %b | %b", $time, v000001d7ca22b690_0, v000001d7ca22b730_0, v000001d7ca22b7d0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d7ca22b690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d7ca22b730_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d7ca22b690_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d7ca22b730_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d7ca22b690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d7ca22b730_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d7ca22b690_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d7ca22b730_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001d7ca228a20;
+T_1 ;
+    %vpi_call 2 24 "$dumpfile", "OR_Gate_example.vcd" {0 0 0};
+    %vpi_call 2 25 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001d7ca228a20 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\OR_Gate_example_tb.v";
+    "./OR_Gate_example.v";
