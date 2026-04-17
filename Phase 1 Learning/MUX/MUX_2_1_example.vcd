@@ -1,0 +1,73 @@
+$date
+	Sat Apr 18 00:01:22 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module MUX_2_1_example_tb $end
+$var wire 1 ! Y $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ S0 $end
+$scope module uut $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ S0 $end
+$var wire 1 ! Y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#5
+1#
+#10
+1!
+0#
+1"
+#15
+1#
+#20
+0!
+0#
+0"
+1$
+#25
+1!
+1#
+#30
+0!
+0#
+1"
+#35
+1!
+1#
+#40
+0!
+0#
+0"
+0$
+#45
+1#
+#50
+1!
+0#
+1"
+#55
+1#
+#60
+0!
+0#
+0"
+1$
